@@ -1,6 +1,6 @@
 # cull
 
-Go through your packages, and decide if you _really_ need them.
+Because do you _really_ need three IRC clients?
 
 ## Usage
 
