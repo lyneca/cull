@@ -10,8 +10,8 @@ else
     start_letter="$1"
 fi
 
-echo "Starting from \"$start_letter\"."
-echo "Type 'y' to mark for removal, or anything else to skip."
+echo ":: Starting from \"$start_letter\"."
+echo "   Type 'y' to mark for removal, or anything else to skip."
 echo
 
 for package in $(pacman -Qeqt | grep -P "^[$start_letter-z]"); do
@@ -22,6 +22,11 @@ for package in $(pacman -Qeqt | grep -P "^[$start_letter-z]"); do
     fi
     echo
 done
+
+if [ ! -f to_remove ]; then
+    echo "Nothing to remove."
+    exit
+fi
 
 echo "Listed for removal:"
 cat to_remove
