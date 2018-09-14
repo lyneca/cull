@@ -8,7 +8,7 @@ Because do you _really_ need three IRC clients?
 $ cull
 ```
 
-To start from a particular letter:
+To start from packages beginning with a particular letter:
 
 ```bash
 # Starts from packages starting with with f
